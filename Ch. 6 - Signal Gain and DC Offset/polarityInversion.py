@@ -11,6 +11,7 @@ filename = 'sw20.wav'
 [x, Fs] = soundfile.read(filename)
 Ts = 1/Fs  # Sampling period
 N = len(x)  # Total number of samples in signal
+print(f"number of element in x: {N}, in x we have {x}")
 t = np.arange(0, N) * Ts
 # Polarity inversion
 y = -1 * x
